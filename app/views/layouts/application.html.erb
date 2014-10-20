@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reptiles</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="pojemnik">
+    <h1 id="logo">Gady w Polsce</h1>
+    <ul id="menu">
+        <li id="o1"><%= link_to "jaszczurka zwinka", :action => "lizard" %></li>
+        <li id="o2"><%= link_to "zaskroniec zwyczajny", :action => "snake" %></li>
+        <li id="o3"><%= link_to "żmija zygzakowata", :action => "viper" %></li>
+        <li id="o4"><%= link_to "żółw czerwonolicy", :action => "turtle" %></li>
+    </ul>
+    <div id="tresc">
+        <%= yield %>
+    </div>
+</div>
+
+</body>
+</html>
